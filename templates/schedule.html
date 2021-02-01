@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Schedule</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h2>Send "{{msg}}" to {{recepient}} {{reps}} at {{sched_time}}?</h2>
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <form>
+            <button id='start' type="button" class="btn btn-success">Start</button>
+        </form>
+        <form>
+            <button id='stop' type="button" class="btn btn-danger">Stop</button>
+        </form>
+      </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type=text/javascript>
+        $(function() {
+          $('#start').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/start',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+        $(function() {
+          $('#stop').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/stop',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+    </script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+</html>
